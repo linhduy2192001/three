@@ -1,0 +1,40 @@
+.pd{
+    padding-top: 150px ;
+}
+
+.textbox{
+    .heading{
+        @include text(40px,pdbl,normal,$purple-cl,uppercase);
+    }
+    .heading-cl{
+        margin-top: 20px;
+        @include text(13px,ml,normal,$green-cl,uppercase);
+        letter-spacing: 5.2pxs;
+    }
+    .para{
+        @include text(16px,mll,24px,$purple-para-cl,normal);
+        margin-top: 32px;
+    }
+}
+.btnmain{
+    padding: 20px 20px;
+    @include text(13px,ml,normal,$purple-cl,uppercase);
+    letter-spacing: 5.2px;
+    border: 3px solid $green-cl;
+    width: max-content;
+    display: block;
+    margin-top: 33px;
+    @include transition($t);
+    &:hover{
+        border: 3px solid $purple-cl;
+        @include transition($t);
+    }
+}
+
+.heading-top{
+    @include text(40px,ml,normal,$purple-cl,uppercase);
+    letter-spacing: 5.2px;
+}
+.heading-bottom{
+    @include text(80px,pdbl,90px,$purple-cl,uppercase);
+}

@@ -1,0 +1,56 @@
+// css header
+.header{
+    background: transparent;
+    height: 170px;
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+    transform: translateY(0);
+    @include transition($t);
+    .container{
+        height: 100%;
+    }
+    .menu{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            @include text(10px,ml,12,$white-cl,uppercase);
+            margin: 0px 29px;
+            @include transition($t);
+            img{
+                display: flex;
+                align-items: center;
+            }
+            &:hover{
+                @include transition($t);
+                &:after{
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background: $green-cl;
+                    position: absolute;
+                    bottom: 40px;
+                    left: 0;
+                    @include transition($t);
+                }
+            }
+        }
+    }
+
+    &.hide{
+        transform: translateY(-100%);
+        @include transition($t);
+    }
+    &.active{
+        @include transition($t);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,$green-cl 100%);
+        transition: background 1000ms linear;
+        -webkit-transition: background 1000ms linear;
+        -ms-transition: background 1000ms linear;
+    }
+}

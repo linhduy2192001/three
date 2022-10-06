@@ -1,0 +1,350 @@
+// CSS HOMEPAGE
+// Ví dụ
+.slider{
+    position: relative;
+    .bg{
+        height: 100vh;
+        overflow: hidden;
+        img{
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .title{
+        .headingf{
+            @include text(80px,ml,normal,$white-cl,uppercase);
+            letter-spacing: 20px;
+            @include mid();
+            z-index: 1;
+
+        }
+        .headingb{
+            @include text(200px,ml,normal,rgba(8, 205, 95, 0.5),uppercase);
+            @include mid();
+        }
+    }
+}
+
+.aarhus{
+    background: $section-cl;
+    display: flex;
+    align-items: center;
+    &__btn{
+        margin:0px 111px;
+        a{
+            display: block;
+            padding: 16px;
+            border: 2px solid $green-cl;
+            margin-bottom: 20px;
+            .prev{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__content{
+        display: flex;
+        .textbox{
+            background: $white-cl;
+            max-width: 555px;
+            padding: 100px;
+        }
+        &-bg{
+            overflow: hidden;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.select{
+    background: $section-cl;
+    .container{
+        .textbox{
+            display: flex;
+            .heading{
+                font-family: ml;
+                font-size: 40px;
+                display: flex;
+                align-items: stretch;
+                flex-direction: column;
+                margin-right: 190px;
+                span{
+                    font-size: 80px;
+                    font-family: pdbl;
+                }
+            }
+            .para{
+                max-width: 449px;
+            }
+            &::before{
+                display: block;
+                content: "";
+                width: 2px;
+                background: $green-cl;
+                margin-right: 46px;
+            }
+        }
+    }
+    &__project{
+        padding-top: 150px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        &-card{
+            position: relative;
+
+            .img{
+                cursor: pointer;
+                overflow: hidden;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                    object-fit: cover;
+                    transform: scale(1);
+                    @include transition($t);
+                }
+            }
+            .textbox{
+                text-align: center;
+                @include mid();
+                @include transition($t);
+                display: none;
+                width: 100%;
+                height: 100%;
+                background: rgba(35,47,90,0.9);
+                outline: 1px solid $green-cl;
+                outline-offset: -50px;
+                .heading{
+                    color: $white-cl;
+                }
+            }
+            &:hover{
+                .img{
+                    cursor: pointer;
+                    img{
+                        transform: scale(1.2);
+                        @include transition($t);
+                    }
+                }
+                .textbox{
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    cursor: pointer;
+                    @include transition($t);
+                }
+            }
+        }
+    }
+}
+
+.function{
+    display: flex;
+    align-items: center;
+    background: $section-cl;
+    &__img{
+        display: flex;
+        .textbox{
+            position: relative;
+            .title{
+                @include mid();
+                text-align: center;
+                .heading-top{
+                    @include text(40px,ml,90px,$white-cl,uppercase);
+                    letter-spacing: 5.2px;
+                }
+                .heading-bottom{
+                    @include text(80px,pdbl,90px,$white-cl,uppercase);
+                }
+            }
+            .bg{
+                height: 100%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .dsc{
+                max-width: 555px;
+                padding: 150px 110px;
+                background: $white-cl;
+                .textbox{
+                    margin-bottom: 55px;
+                    .heading-cl{
+                        @include text(13px,ml,none,$purple-cl,uppercase);
+                        letter-spacing: 5.2px;
+                    } 
+                    .para{
+                        margin-top: 10px;
+                    }
+                }
+               
+        }
+       
+        
+    }
+    // &__textbox{
+    //     max-width: 555px;
+    //     padding: 150px 110px;
+    //     background: $white-cl;
+    //     .heading-cl{
+    //         @include text(13px,ml,none,$purple-cl,uppercase);
+    //         letter-spacing: 5.2px;
+    //     }
+    // }
+    .btnmain{
+        transform: rotate(-90deg);
+        margin: 0px 111px;
+    }
+}
+
+.meet{
+    background: $section-cl;
+    .container{
+        .textbox{
+            display: flex;
+            justify-content: space-between;
+            .heading{
+                font-family: ml;
+                font-size: 40px;
+                display: flex;
+                align-items: stretch;
+                flex-direction: column;
+                margin-right: 95px;
+                span{
+                    font-size: 80px;
+                    font-family: pdbl;
+                }
+            }
+            .para{
+                max-width: 449px;
+                margin-top: initial;
+            }
+            &::before{
+                display: block;
+                content: "";
+                width: 2px;
+                background: $green-cl;
+                margin-right: 46px;
+            }
+        }
+    }
+    &__super{
+        display: flex;
+        &-card{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            .item{
+                position: relative;
+                .img{
+                    overflow: hidden;
+                    height: 100%;
+                    cursor: pointer;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
+                        object-fit: cover;
+                        transform: scale(1);
+                        @include transition($t);
+                    }
+                }
+                .textbox{
+                    @include mid();
+                    display: none;
+                    text-align: center;
+                    flex-direction: column;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(29,91,91,0.9);
+                    outline: 1px solid $green-cl;
+                    outline-offset: -50px;
+                    @include transition($t);
+                    .heading{
+                        margin-right: initial;
+                        color: $white-cl;
+                        font-size: 30px;
+                    }
+                    .headingcl{
+                        @include text(15px,ml,34px,$green-cl,uppercase);
+                        letter-spacing: 5.2px;
+                    }
+                    &::before{
+                        display: none;
+                    }
+                    .social{
+                        margin-top: 20px;
+                        a{
+                            &:not(:last-child){
+                                margin-right: 20px;
+                            }
+                        }                            
+                    }
+                }
+                &:hover{
+                        @include transition($t);
+
+                        .img{
+                            img{
+                                transform: scale(1.2);
+                                @include transition($t);
+                            }
+                        }
+                        .textbox{
+                            @include transition($t);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                }
+            }
+        }
+    }
+}
+
+.need{
+    background: $section-cl;
+    padding-bottom: 150px;
+    &__title{
+        display: flex;
+        justify-content: space-evenly;
+        .textbox{
+            background: $white-cl;
+            max-width: 550px;
+            padding: 100px;
+            .contact{
+                .row{
+                    margin-top: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    .heading{
+                        @include text(13px,ml,24px,$purple-cl,uppercase);
+                    }
+                    .para{
+                        margin-top: initial;
+                    }
+                }
+            }
+        }
+        .map{
+            height: 100%;
+            iframe{
+            }
+        }
+    }
+}
